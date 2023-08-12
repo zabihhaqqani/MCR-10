@@ -14,6 +14,7 @@ export function DataProvider({ children }) {
     lowStock: "",
     sort: localStorage?.getItem("sort") ?? "name",
   };
+
   const [dataState, dataDispatch] = useReducer(DataReducer, initialState);
 
   const sortByDepartmentData = [...dataState?.data]?.filter((data) =>
@@ -31,14 +32,12 @@ export function DataProvider({ children }) {
   });
 
   const sortByLowStockItems = [...sortAscendingData]?.filter((data) =>
-    dataState?.lowStock  ? data.stock <= 10 : data
+    dataState?.lowStock ? data.stock <= 10 : data
   );
-
 
   const addProductHandler = (product) => {
     dataDispatch({ type: "ADD_PRODUCT", payload: product });
-  }
-console.log(dataState?.data);
+  };
 
   useEffect(() => {
     localStorage.setItem("sortByDepartment", dataState?.sortByDepartment);
@@ -51,8 +50,6 @@ console.log(dataState?.data);
   useEffect(() => {
     localStorage.setItem("sort", dataState?.sort);
   }, [dataState?.sort]);
-
-
 
   return (
     <DataContext.Provider

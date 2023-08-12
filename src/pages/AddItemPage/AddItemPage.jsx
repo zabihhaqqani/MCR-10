@@ -3,6 +3,7 @@ import "./AddItemPage.css";
 import { v4 as uuidv4 } from "uuid";
 import { useDataContext } from "../../context/DataContext";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const AddItemPage = () => {
   const { addProductHandler } = useDataContext();
@@ -27,13 +28,17 @@ const AddItemPage = () => {
       ...prev,
       [e.target.name]: e.target.value,
     }));
+    
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
     addProductHandler(productDetails);
     setProductDetails();
+     toast.success(`Product added to ${productDetails?.department} Department`);
     navigate("/productListing");
+
+
   };
   return (
     <div>
@@ -100,7 +105,7 @@ const AddItemPage = () => {
 
           <label htmlFor="sku">SKU:</label>
           <input
-            type="text"
+            type="number"
             placeholder="Enter SKU"
             id="sku"
             name="sku"
