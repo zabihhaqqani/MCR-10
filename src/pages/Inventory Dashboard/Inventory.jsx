@@ -14,7 +14,7 @@ const Inventory = () => {
   );
 
   return (
-    <div>
+    <div  className="inventory-card-container">
       <div className="inventory-card">
         <h3>{totalStock}</h3>
         <h3>Total Stock</h3>

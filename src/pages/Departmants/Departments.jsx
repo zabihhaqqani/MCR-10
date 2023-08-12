@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useDataContext } from "../../context/DataContext";
+import "./Departments.css"
 
 const Departments = () => {
   const { dataDispatch } = useDataContext();
@@ -9,10 +10,10 @@ const Departments = () => {
     dataDispatch({ type: "CATEGORY_SELECTOR", payload: categoryName });
   };
   return (
-    <div>
+    <div className="inventory-card-container">
       {" "}
       <div
-        className="inventory-card"
+        className="departments-card"
         onClick={() => {
           categorySelector("Kitchen");
           navigate("/productListing");
@@ -21,7 +22,7 @@ const Departments = () => {
         <h3>Kitchen</h3>
       </div>
       <div
-        className="inventory-card"
+        className="departments-card"
         onClick={() => {
           categorySelector("Clothing");
           navigate("/productListing");
@@ -30,7 +31,7 @@ const Departments = () => {
         <h3>Clothing</h3>
       </div>
       <div
-        className="inventory-card"
+        className="departments-card"
         onClick={() => {
           categorySelector("Toys");
           navigate("/productListing");

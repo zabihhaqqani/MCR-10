@@ -1,17 +1,21 @@
-.inventory-card{
+.departments-card{
     background-color: #f3f3f4;
     display: flex;
     padding: 2rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 2rem;
+    margin: 1rem;
     border-radius: 5px;
-
+    cursor: pointer;
 }
 
 .inventory-card-container{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.departments-card:hover{
+    background-color: #969697;
 }

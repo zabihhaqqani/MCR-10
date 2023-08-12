@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Inventory from "./pages/Inventory Dashboard/Inventory";
 import LeftSideBar from "./pages/LeftSideBar/LeftSideBar";
 import ProductListing from "./pages/Product Listing/ProductListing";
+// import { ToastContainer } from "react-toastify";
 
 import AddItemPage from "./pages/AddItemPage/AddItemPage";
 import Departments from "./pages/Departmants/Departments";
@@ -19,6 +20,18 @@ function App() {
           <Route path="/addItem" element={<AddItemPage />} />
           <Route path="/departments" element={<Departments />} />
         </Routes>
+        {/* <ToastContainer
+          position="bottom-right"
+          autoClose={1000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        /> */}
       </div>
     </div>
   );
