@@ -3,7 +3,7 @@
   flex-direction: column;
   padding: 1rem;
   background-color: black;
-  height: 100;
+    height: 100vh;
     /* flex: 0.5; */
 
 }
@@ -16,7 +16,7 @@
   display: flex;
   padding: 0.5rem;
   border-radius: 5px;
-   color: white;
+   color: #f3f3f477;
   text-decoration: none;
 }
 

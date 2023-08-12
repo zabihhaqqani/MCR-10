@@ -8,8 +8,10 @@
 }
 
 .main-container{
-    display: flex;
-    height: 100vh;
+     display: flex;
+  flex-direction: row;
+  align-items: stretch; 
+
 }
 
 .btn {
@@ -25,7 +27,10 @@
 }
 
 .main-content {
-  /* flex: 3; */
-  background-color: #ffffff;
+
+  flex-grow: 3;
   padding: 20px;
+  overflow: auto;
+  height: 100vh;
 }
+

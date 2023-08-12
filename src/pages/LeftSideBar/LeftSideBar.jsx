@@ -4,7 +4,7 @@ import "./LeftSideBar.css";
 
 const LeftSideBar = () => {
   const getActiveStyle = ({ isActive }) => ({
-    color: isActive && "#f02836",
+    color: isActive && "white",
   });
   return (
     <div className="left-side-bar-container">

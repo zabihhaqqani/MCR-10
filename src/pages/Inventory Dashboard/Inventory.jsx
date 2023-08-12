@@ -14,19 +14,21 @@ const Inventory = () => {
   );
 
   return (
-    <div  className="inventory-card-container">
-      <div className="inventory-card">
-        <h3>{totalStock}</h3>
-        <h3>Total Stock</h3>
-      </div>
-      <div className="inventory-card">
-        <h3>{totalDeliveredItems}</h3>
-        <h4>Total Delivered</h4>
-      </div>
-      <div className="inventory-card">
-        <h3>{lowStockItems?.length}</h3>
+    <div> 
+      <div className="inventory-card-container">
+        <div className="inventory-card">
+          <h3>{totalStock}</h3>
+          <h3>Total Stock</h3>
+        </div>
+        <div className="inventory-card">
+          <h3>{totalDeliveredItems}</h3>
+          <h4>Total Delivered</h4>
+        </div>
+        <div className="inventory-card">
+          <h3>{lowStockItems?.length}</h3>
 
-        <h4>Low Stock:</h4>
+          <h4>Low Stock</h4>
+        </div>
       </div>
     </div>
   );

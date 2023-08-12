@@ -5,8 +5,10 @@ import { useDataContext } from "../../context/DataContext";
 import { useNavigate } from "react-router-dom";
 
 const AddItemPage = () => {
-    const {addProductHandler} = useDataContext()
-    const navigate = useNavigate()
+  const { addProductHandler } = useDataContext();
+
+  const navigate = useNavigate();
+
   const [productDetails, setProductDetails] = useState({
     id: uuidv4(),
     name: "",
@@ -17,7 +19,7 @@ const AddItemPage = () => {
     supplier: "",
     imageUrl: "",
     description: "",
-    delivered:""
+    delivered: "",
   });
 
   const inputHandler = (e) => {
@@ -29,17 +31,15 @@ const AddItemPage = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-   addProductHandler(productDetails);
-   setProductDetails()
-   navigate("/productListing")
-    // isEdit && editHabitHandler(habitDetails);
+    addProductHandler(productDetails);
+    setProductDetails();
+    navigate("/productListing");
   };
   return (
     <div>
       <div className="modal-content">
         <form onSubmit={submitHandler}>
           <div>
-            <span className="close">&times;</span>
             <h2>Add New Product</h2>
           </div>
           <label htmlFor="Department">Department:</label>
@@ -60,7 +60,7 @@ const AddItemPage = () => {
           <label htmlFor="name">Name:</label>
           <input
             type="text"
-            placeholder="Enter Product Name"
+            placeholder="Enter name"
             id="name"
             name="name"
             onChange={inputHandler}
@@ -75,12 +75,13 @@ const AddItemPage = () => {
             rows="2"
             onChange={inputHandler}
             required
+            placeholder="Enter Description"
           ></textarea>
 
           <label htmlFor="price">Price:</label>
           <input
             type="number"
-            placeholder="Enter Product Name"
+            placeholder="Enter Price"
             id="price"
             name="price"
             onChange={inputHandler}
@@ -90,7 +91,7 @@ const AddItemPage = () => {
           <label htmlFor="stock">Stock:</label>
           <input
             type="number"
-            placeholder="Enter Product Name"
+            placeholder="Enter Stock"
             id="stock"
             name="stock"
             onChange={inputHandler}
@@ -100,7 +101,7 @@ const AddItemPage = () => {
           <label htmlFor="sku">SKU:</label>
           <input
             type="text"
-            placeholder="Enter Product Name"
+            placeholder="Enter SKU"
             id="sku"
             name="sku"
             onChange={inputHandler}
@@ -110,7 +111,7 @@ const AddItemPage = () => {
           <label htmlFor="supplier">Supplier:</label>
           <input
             type="text"
-            placeholder="Enter Product Name"
+            placeholder="Enter Supplier"
             id="supplier"
             name="supplier"
             onChange={inputHandler}
@@ -121,12 +122,10 @@ const AddItemPage = () => {
           <label htmlFor="delivered">Delivered:</label>
           <input
             type="text"
-            placeholder="Enter Product Name"
+            placeholder="Enter Delivered"
             id="delivered"
             name="delivered"
             disabled
-            // onChange={inputHandler}
-            // required
           />
 
           <label htmlFor="imageUrl">Image URL:</label>
@@ -137,7 +136,6 @@ const AddItemPage = () => {
             name="imageUrl"
             onChange={inputHandler}
             required
-            // value={productDetails?.imageUrl}
           />
 
           <button className="btn" type="submit">

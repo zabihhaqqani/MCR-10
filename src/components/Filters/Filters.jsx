@@ -4,7 +4,7 @@ import { useDataContext } from "../../context/DataContext";
 import { useNavigate } from "react-router-dom";
 
 const Filters = () => {
-  const { dataDispatch, sortByDepartmant, sort, lowStock } = useDataContext();
+  const { dataDispatch, sort, lowStock } = useDataContext();
 
   const navigate = useNavigate()
   return (

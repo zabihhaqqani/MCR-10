@@ -5,7 +5,7 @@ import "./ProductListing.css";
 import Card from "../../components/Card/Card";
 
 const ProductListing = () => {
-  const { sortHandler, filteredData, sortByLowStockItems } = useDataContext();
+  const { sortByLowStockItems } = useDataContext();
 
   return (
     <div>
