@@ -1,0 +1,8 @@
+.inventory-card{
+    background-color: #f3f3f4;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+}

@@ -1,0 +1,28 @@
+.left-side-bar-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: black;
+  height: 100vh;
+    flex: 0.5;
+
+}
+
+.link {
+  margin: 1rem;
+  list-style-type: none;
+  font-size: 18px;
+  line-height: 40px;
+  display: flex;
+  padding: 0.5rem;
+  border-radius: 5px;
+   color: white;
+  text-decoration: none;
+}
+
+.link:hover {
+  background-color: rgba(0, 0, 255, 0.021);
+  cursor: pointer;
+  color: white;
+  transition: 0.25s;
+}
