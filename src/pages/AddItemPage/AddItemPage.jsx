@@ -17,6 +17,7 @@ const AddItemPage = () => {
     supplier: "",
     imageUrl: "",
     description: "",
+    delivered:""
   });
 
   const inputHandler = (e) => {
@@ -78,7 +79,7 @@ const AddItemPage = () => {
 
           <label htmlFor="price">Price:</label>
           <input
-            type="text"
+            type="number"
             placeholder="Enter Product Name"
             id="price"
             name="price"
@@ -88,7 +89,7 @@ const AddItemPage = () => {
 
           <label htmlFor="stock">Stock:</label>
           <input
-            type="text"
+            type="number"
             placeholder="Enter Product Name"
             id="stock"
             name="stock"

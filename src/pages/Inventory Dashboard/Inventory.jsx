@@ -4,9 +4,9 @@ import "./Inventory.css";
 const Inventory = () => {
   const { data } = useDataContext();
 
-  const lowStockItems = data?.filter((data) => data.stock <= 10);
+  const lowStockItems = data?.filter((item) => Number(item?.stock) <= 10);
 
-  const totalStock = data?.reduce((total, item) => total + item?.stock, 0);
+  const totalStock = data?.reduce((total, item) => total + Number(item?.stock), 0);
 
   const totalDeliveredItems = data?.reduce(
     (total, item) => total + item?.delivered,
